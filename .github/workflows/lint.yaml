@@ -1,4 +1,9 @@
-on: [push]
+name: TypeScript Lint
+on:
+  pull_request:
+  push:
+    branches: [master, workflows]
+
 jobs:
   linter-action:
     runs-on: ubuntu-latest
