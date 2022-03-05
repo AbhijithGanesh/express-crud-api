@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "rulesDirectory": [
-      "tslint-plugin-prettier"
-    ],
+    "rulesDirectory": ["tslint-plugin-prettier"],
     "rules": {
       "prettier": true
     },

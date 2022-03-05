@@ -11,7 +11,7 @@
   "scripts": {
     "start": "ts-node ./src/index.ts",
     "dev": "ts-node-dev --poll --no-notify ./src/index.ts",
-    "prettify": "npx prettier-tslint fix '**/*.ts'",
+    "prettify": "npx prettier --write ./src/",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -19,10 +19,8 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
-    "prettier-tslint": "^0.4.2",
     "prisma": "^3.10.0",
-    "ts-node-dev": "^1.1.8",
-    "tslint-plugin-prettier": "^2.3.0"
+    "ts-node-dev": "^1.1.8"
   },
   "name": "express-ts",
   "version": "1.0.0",
