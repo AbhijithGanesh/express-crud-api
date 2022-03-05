@@ -10,10 +10,22 @@
   },
   "scripts": {
     "start": "ts-node ./src/index.ts",
-    "dev": "ts-node-dev --poll --no-notify ./src/index.ts"
+    "dev": "ts-node-dev --poll --no-notify ./src/index.ts",
+    "prettify": "npx prettier --write ./src/",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "eslint": "^8.10.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
+    "prettier": "^2.5.1",
     "prisma": "^3.10.0",
     "ts-node-dev": "^1.1.8"
-  }
+  },
+  "name": "express-ts",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "https://github.com/abhijithganesh/express-crud-api",
+  "author": "Abhijith Ganesh <67182544+AbhijithGanesh@users.noreply.github.com>",
+  "private": false
 }
