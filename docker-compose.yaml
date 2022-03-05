@@ -1,0 +1,14 @@
+
+services:
+  database:
+    container_name: express-database
+    image: postgres
+    env_file: creds.env
+  proxy-pass:
+    build: nginx
+    container_name: express-nginx
+    ports:
+      - 8000:8000
+
+volumes:
+  nginx:
