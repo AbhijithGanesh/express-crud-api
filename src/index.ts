@@ -2,7 +2,7 @@ import express, { Express, Request, Response, urlencoded, json } from 'express';
 import { IssueRouter } from './routes/issues';
 import path from 'path';
 
-let app: Express = express();
+const app: Express = express();
 const port: number = 3000;
 
 app.use(json());

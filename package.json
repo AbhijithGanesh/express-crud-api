@@ -30,5 +30,8 @@
   "main": "src/index.ts",
   "repository": "https://github.com/abhijithganesh/express-crud-api",
   "author": "Abhijith Ganesh <67182544+AbhijithGanesh@users.noreply.github.com>",
-  "private": false
+  "private": false,
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }
