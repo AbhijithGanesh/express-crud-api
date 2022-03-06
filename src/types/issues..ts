@@ -1,8 +1,8 @@
 interface Issue {
   id: number;
-  title: String;
-  body: String;
-  additional_details: String;
+  title: string;
+  body: string;
+  additional_details: string;
   date_created: any;
   userID: number;
   User: any;

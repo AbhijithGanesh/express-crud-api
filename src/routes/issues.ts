@@ -7,14 +7,14 @@ const IssueRouter: Router = Router();
 IssueRouter.get('/:id', (req: Request, res: Response, next) => {
   const data: any = prisma.user.findMany({
     where: {
-      id: parseInt(req.params.id)
+      id: parseInt(req.params.id, 1)
     }
   });
   res.send(data);
 });
 
 IssueRouter.post('/postIssue', (req: Request, res: Response) => {
-  const data: any = prisma.user.create(req.body);
+  const data: User = prisma.user.create(req.body);
   console.log(data);
   res.send('Data has been awaited.');
 });

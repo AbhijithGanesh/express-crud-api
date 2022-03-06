@@ -1,9 +1,9 @@
 import { Issue } from './issues.';
 interface User {
   id: number;
-  name: String;
-  email: String;
-  twitter: String;
+  name: string;
+  email: string;
+  twitter: string;
   issue: Issue[];
 }
 
