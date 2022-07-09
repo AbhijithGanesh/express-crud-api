@@ -15,6 +15,7 @@ CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "name" VARCHAR(255),
     "email" VARCHAR(200),
+    "twitter" VARCHAR(230),
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );

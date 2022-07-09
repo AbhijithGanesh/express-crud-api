@@ -15,4 +15,3 @@ main()
     await prisma.$disconnect();
   });
 
-export { prisma };

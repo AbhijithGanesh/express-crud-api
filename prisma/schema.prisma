@@ -24,3 +24,8 @@ model User {
   twitter String? @db.VarChar(230)
   issue   Issue[]
 }
+
+model Test {
+  id   Int     @id @default(autoincrement())
+  name String? @db.VarChar(255)
+}

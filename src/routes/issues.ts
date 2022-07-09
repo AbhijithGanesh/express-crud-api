@@ -1,30 +1,32 @@
-import { prisma } from '../../prisma/conn';
+import { PrismaClient } from '@prisma/client';
+import { json } from 'express';
 import { Router, Request, Response } from 'express';
-import { User } from '../types/users.';
 
+const prisma = new PrismaClient();
 const IssueRouter: Router = Router();
+IssueRouter.use(json());
 
 IssueRouter.get('/:id', (req: Request, res: Response, next) => {
-  const data: any = prisma.user.findMany({
+  const data: any = prisma.issue.findMany({
     where: {
-<<<<<<< HEAD
-      id: parseInt(req.params.id)
-=======
       id: parseInt(req.params.id, 1)
->>>>>>> f8c24506b9dcd8ccc7d46210b9dabc55db15a7a1
     }
   });
   res.send(data);
 });
 
-IssueRouter.post('/postIssue', (req: Request, res: Response) => {
-<<<<<<< HEAD
-  const data: any = prisma.user.create(req.body);
-=======
-  const data: User = prisma.user.create(req.body);
->>>>>>> f8c24506b9dcd8ccc7d46210b9dabc55db15a7a1
-  console.log(data);
+IssueRouter.post('/postIssue', async (req: Request, res: Response) => {
+  const result = await prisma.Test.create(req.body);
   res.send('Data has been awaited.');
+});
+
+IssueRouter.post(`/postIssue`, async (req: Request, res: Response) => {
+  const result = await prisma.test.create({
+    data: {
+      name: req.body.name
+    }
+  });
+  res.json(result);
 });
 
 export { IssueRouter };
