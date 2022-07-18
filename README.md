@@ -1,3 +1,3 @@
 # Express-Crud-API
 
-My Express Typescript server
+Simple Express CRUD API made using Express, TypeScript and Prisma
